@@ -1,0 +1,50 @@
+#hero {
+    padding-top: 96px;
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo {
+            border-radius: 50%;
+        }
+        .title {
+            padding-top: 8px;
+            font-size: 48px;
+            background: linear-gradient(to right, #663399 20%, #265c73 40%, #663399 60%, #265c73 80%);
+            background-size: 200% 200%;
+            background-clip: text;
+            color: transparent;
+            animation: animate-gradient 5s ease infinite;
+        }
+        .description {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            padding-top: 8px;
+            .link {
+                display: grid;
+                place-items: center;
+                border-radius: 9999px;
+                padding: 16px;
+                transition: background-color 300ms ease-in-out;
+                &:hover {
+                    background-color: rgb(39, 39, 42);
+                }
+            }
+        }
+    }
+}
+
+@keyframes animate-gradient {
+    0%,
+    100% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
+    }
+}

@@ -1,0 +1,11 @@
+#footer {
+    padding-top: 128px;
+    display: grid;
+    place-items: center;
+    .links {
+        margin-top: 16px;
+    }
+    .logo {
+        filter: invert(1);
+    }
+}

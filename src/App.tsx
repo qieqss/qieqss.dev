@@ -1,9 +1,11 @@
 import React from "react";
+import { Route } from 'wouter';
+import Home from './pages/Home';
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
   return (
     <>
-    
+    <Route path='/' component={Home} />
     </>
   );
 };
