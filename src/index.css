@@ -8,12 +8,8 @@
     color: #fff;
 }
 
-body,
 html {
     scroll-snap-type: y mandatory;
-}
-
-html {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }

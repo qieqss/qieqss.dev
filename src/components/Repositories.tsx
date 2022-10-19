@@ -3,6 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 import styles from '/src/styles/Repositories.module.scss';
 import Repository from './ui/Repository';
 import { motion } from 'framer-motion';
+import Footer from './Footer';
 
 const Repositories: React.FC = () => {
     interface PinnedRepository {
@@ -88,6 +89,7 @@ const Repositories: React.FC = () => {
                     </motion.div>
                 ))}
             </div>
+            <Footer />
         </section>
     );
 };

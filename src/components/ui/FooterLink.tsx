@@ -5,11 +5,10 @@ import styles from '/src/styles/ui/FooterLink.module.scss';
 interface Props {
     href: string;
     text: string;
-    location: string;
 }
 
-const FooterLink: React.FC<Props> = ({ href, text, location }: Props) => {
-    const [_, setLocation] = useLocation();
+const FooterLink: React.FC<Props> = ({ href, text }: Props) => {
+    const [location, setLocation] = useLocation();
     const isActive = location === (href === 'home' ? '/' : '/' + href);
     return (
         <a

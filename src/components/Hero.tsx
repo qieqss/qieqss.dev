@@ -2,10 +2,12 @@ import React from 'react';
 import Picture from '/src/assets/pic.jpg';
 import { FiGithub, FiMail } from 'react-icons/fi';
 import styles from '/src/styles/Hero.module.scss';
+import Nav from './Nav';
 
 const Hero: React.FC = () => {
     return (
         <section id={styles.hero}>
+            <Nav />
             <header className={styles.header}>
                 <img className={styles.logo} src={Picture} width="165" height="165" alt="" />
                 <h1 className={styles.title}>qieqss</h1>

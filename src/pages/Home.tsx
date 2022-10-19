@@ -7,10 +7,8 @@ import Repositories from '../components/Repositories';
 const Home: React.FC = () => {
     return (
         <div className="row">
-                <Nav />
-                <Hero />
-                <Repositories />
-                <Footer />
+            <Hero />
+            <Repositories />
         </div>
     );
 };
