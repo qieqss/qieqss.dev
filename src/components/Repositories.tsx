@@ -1,6 +1,6 @@
 import React from 'react';
 import axios, { AxiosResponse } from 'axios';
-import styles from '/src/styles/Repositories.module.scss';
+import styles from '/src/styles/components/Repositories.module.scss';
 import Repository from './ui/Repository';
 import { motion } from 'framer-motion';
 import Footer from './Footer';

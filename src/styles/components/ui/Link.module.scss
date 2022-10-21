@@ -4,7 +4,7 @@
     transition: color 300ms ease;
     &:hover {
         cursor: pointer;
-        &:not(.nav__link--active) {
+        &:not(.link--active) {
             color: lighten(#265c73, 5%);
         }
     }

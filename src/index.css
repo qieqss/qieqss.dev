@@ -29,10 +29,6 @@ section {
     scroll-snap-align: center;
 }
 
-.capitalize {
-    text-transform: capitalize;
-}
-
 .row {
     display: flex;
     align-items: center;

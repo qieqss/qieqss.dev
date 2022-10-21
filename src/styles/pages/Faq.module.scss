@@ -1,0 +1,46 @@
+.text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title {
+        background: linear-gradient(to right, #663399 20%, #265c73 40%, #663399 60%, #265c73 80%);
+        background-size: 200% 200%;
+        background-clip: text;
+        color: transparent;
+        animation: animate-gradient 5s ease infinite;
+    }
+
+    .description {
+        margin-top: 8px;
+        color: #ccc;
+        font-size: 18px;
+    }
+
+    .questions {
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px;
+        gap: 40px;
+        .answer__anchor {
+            text-decoration: none;
+            color: #663399;
+            font-weight: 600;
+            transition: text-shadow 300ms ease;
+            &:hover {
+                text-shadow: 0 0 2px currentColor;
+            }
+        }
+    }
+}
+
+@keyframes animate-gradient {
+    0%,
+    100% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
+    }
+}

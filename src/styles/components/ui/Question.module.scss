@@ -1,0 +1,9 @@
+.qna {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .question {
+        font-size: 24px;
+        color: #2c6b86;
+    }
+}

@@ -1,13 +1,13 @@
 import React from 'react';
-import NavLink from './ui/NavLink';
-import styles from '/src/styles/Nav.module.scss';
+import Link from './ui/Link';
+import styles from '/src/styles/components/Nav.module.scss';
 
 const Nav: React.FC = () => {
-    const links = ['home', 'blog', 'guestbook', 'FAQ', 'more'];
+    const links = ['Home', 'FAQ', 'More'];
     return (
         <nav id={styles.nav}>
             {links.map((link, index) => (
-                <NavLink href={link === 'FAQ' ? 'faq' : link} text={link} key={index} />
+                <Link href={link === 'FAQ' ? 'faq' : link} text={link} key={index} />
             ))}
         </nav>
     );

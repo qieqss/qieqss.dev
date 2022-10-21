@@ -1,0 +1,30 @@
+#footer {
+    padding-top: 128px;
+    display: grid;
+    place-items: center;
+    .links {
+        margin-top: 24px;
+    }
+    .logo {
+        position: relative;
+        height: 70px;
+        width: 70px;
+        .logo__img {
+            filter: invert(1);
+        }
+        &:hover {
+            cursor: pointer;
+            .popper {
+                opacity: 1;
+                translate: 70px;
+            }
+        }
+        .popper {
+            opacity: 0;
+            position: absolute;
+            top: 25px;
+            right: 0;
+            transition: opacity 300ms ease, translate 300ms ease;
+        }
+    }
+}

@@ -1,16 +1,21 @@
 import React from 'react';
-import FooterLink from './ui/FooterLink';
+import Link from './ui/Link';
 import Logo from '/logo.svg';
-import styles from '/src/styles/Footer.module.scss';
+import styles from '/src/styles/components/Footer.module.scss';
 
 const Footer: React.FC = () => {
-    const links = ['home', 'FAQ', 'more'];
+    const links = ['Home', 'FAQ', 'More'];
     return (
         <footer id={styles.footer}>
-            <img className={styles.logo} src={Logo} width={70} height={70} alt="" />
+            <div className={styles.logo} onClick={() => scrollTo({ top: 0, behavior: 'smooth' })}>
+                <img className={`${styles.logo__img}`} src={Logo} width={70} height={70} alt="" />
+                <h2 className={styles.popper}>
+                    &lt; Top
+                </h2>
+            </div>
             <div className={styles.links}>
                 {links.map((link, index) => (
-                    <FooterLink href={link === 'FAQ' ? 'faq' : link} text={link} key={index} />
+                    <Link href={link} text={link} key={index} />
                 ))}
             </div>
         </footer>

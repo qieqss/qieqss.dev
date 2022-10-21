@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '/src/styles/ui/Repository.module.scss';
+import styles from '/src/styles/components/ui/Repository.module.scss';
 import { FiStar } from 'react-icons/fi';
 import { BiGitRepoForked } from 'react-icons/bi';
 import { motion } from 'framer-motion';
