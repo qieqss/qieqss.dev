@@ -70,24 +70,26 @@ const Repositories: React.FC = () => {
                 <strong>{githubStats.stars}</strong> stars!
             </p>
             <div className={styles.repositories}>
-                {pinnedRepos.map((project, index) => (
-                    <motion.div
-                        initial={{ opacity: 0, translateY: 100 }}
-                        whileInView={{ opacity: 1, translateY: 0 }}
-                        transition={{ duration: 0.2, delay: index * 0.08 }}
-                        key={project.repo}
-                    >
-                        <Repository
-                            link={project.link}
-                            title={project.repo}
-                            description={project.description}
-                            languageColor={project.languageColor}
-                            language={project.language}
-                            stars={project.stars}
-                            forks={project.forks}
-                        />
-                    </motion.div>
-                ))}
+                {pinnedRepos.map((project, index) => {
+                    return (
+                        <motion.div
+                            initial={{ opacity: 0, translateY: 100 }}
+                            whileInView={{ opacity: 1, translateY: 0 }}
+                            transition={{ duration: 0.2, delay: index * 0.08 }}
+                            key={project.repo}
+                        >
+                            <Repository
+                                link={project.link}
+                                title={project.repo}
+                                description={project.description}
+                                languageColor={project.languageColor}
+                                language={project.language}
+                                stars={project.stars}
+                                forks={project.forks}
+                            />
+                        </motion.div>
+                    );
+                })}
             </div>
             <Footer />
         </section>

@@ -22,8 +22,3 @@
     }
 }
 
-@media (max-width: 640px) {
-    .repositories {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-}

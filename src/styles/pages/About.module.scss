@@ -10,17 +10,23 @@
         color: transparent;
         animation: animate-gradient 5s ease infinite;
     }
-    .description {
-        margin-top: 8px;
-        color: #ccc;
-        font-size: 18px;
-    }
-    .projects {
-        display: grid;
-        grid-auto-columns: max-content;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-        margin-top: 48px;
+
+    .paragraph {
+        font-size: 20px;
+        margin-top: 32px;
+        &:first-of-type {
+            margin-top: 16px;
+        }
+        .anchor {
+            cursor: pointer;
+            text-decoration: none;
+            color: #663399;
+            font-weight: 600;
+            transition: text-shadow 300ms ease;
+            &:hover {
+                text-shadow: 0 0 2px currentColor;
+            }
+        }
     }
 }
 
