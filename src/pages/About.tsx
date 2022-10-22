@@ -38,7 +38,7 @@ const About: React.FC = () => {
                     >
                         saxophone
                     </a>
-                    , listening to music and going on trips with friends. I used to like reading books but I
+                    , playing chess, listening to music and going on trips with friends. I used to like reading books but I
                     haven&apos;t read one for a long time now, simply because I have no time. I listen to a lot of music
                     and it has always been a big part of my life.
                 </p>
