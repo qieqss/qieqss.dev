@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 import Spotify from '/src/assets/spotify.webp';
 import { FaSpinner } from 'react-icons/fa';
 import styles from '/src/styles/pages/NowPlaying.module.scss';
+import Footer from '../components/Footer';
 
 const NowPlaying: React.FC = () => {
     interface SpotifyStatus {
@@ -66,6 +67,7 @@ const NowPlaying: React.FC = () => {
                     )}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

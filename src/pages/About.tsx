@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '/src/styles/pages/About.module.scss';
 import Nav from '../components/Nav';
 import { useLocation } from 'wouter';
+import Footer from '../components/Footer';
 
 const About: React.FC = () => {
     const [, setLocation] = useLocation();
@@ -60,6 +61,8 @@ const About: React.FC = () => {
                     I have no time.
                 </p>
             </div>
+
+            <Footer />
         </div>
     );
 };

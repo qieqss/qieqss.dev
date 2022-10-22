@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import CustomQna from '../components/ui/CustomQna';
 import Qna from '../components/ui/Qna';
@@ -95,6 +96,7 @@ const Faq: React.FC = () => {
                     </CustomQna>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 import ProjectCard from '../components/ui/ProjectCard';
 import styles from '/src/styles/pages/More.module.scss';
@@ -37,6 +38,7 @@ const More: React.FC = () => {
                     ))}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
