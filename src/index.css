@@ -34,6 +34,7 @@ section {
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    animation: animate-fade 750ms ease;
     width: 40%;
 }
 
@@ -41,5 +42,14 @@ section {
     .row {
         margin: 0 48px;
         width: 80%;
+    }
+}
+
+@keyframes animate-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
