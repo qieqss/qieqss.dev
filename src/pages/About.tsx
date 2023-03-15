@@ -32,15 +32,15 @@ const About: React.FC = () => {
                     For hobbies other than coding, I really like playing the{' '}
                     <a
                         className={styles.anchor}
-                        href="https://en.wikipedia.org/wiki/Saxophone"
+                        href="https://en.wikipedia.org/wiki/Guitar"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        saxophone
+                        guitar
                     </a>
-                    , playing chess, listening to music and going on trips with friends. I used to like reading books but I
-                    haven&apos;t read one for a long time now, simply because I have no time. I listen to a lot of music
-                    and it has always been a big part of my life.
+                    , playing chess, listening to music and going on trips with friends. I used to like reading books
+                    but I haven&apos;t read one for a long time now, simply because I have no time. I listen to a lot of
+                    music and it has always been a big part of my life.
                 </p>
                 <p className={styles.paragraph}>
                     In 2020 I started learning{' '}
