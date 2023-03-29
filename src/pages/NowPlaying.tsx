@@ -8,15 +8,20 @@ import Footer from '../components/Footer';
 
 const NowPlaying: React.FC = () => {
     interface SpotifyStatus {
-        active_on_discord_desktop: boolean;
-        active_on_discord_mobile: boolean;
-        active_on_discord_web: boolean;
-        activities: string[];
-        dsicord_status: string;
-        discord_user: object;
-        kv: SVGForeignObjectElement;
+        // active_on_discord_desktop: boolean;
+        // active_on_discord_mobile: boolean;
+        // active_on_discord_web: boolean;
+        // activities: object[];
+        // discord_status: string;
+        // discord_user: object;
+        // kv: SVGForeignObjectElement;
         listening_to_spotify: boolean;
-        spotify: any;
+        spotify: {
+            album: string;
+            album_art_url: string;
+            artist: string;
+            song: string;
+        };
     }
 
     const [loading, setLoading] = React.useState(true);
@@ -26,12 +31,11 @@ const NowPlaying: React.FC = () => {
     React.useEffect(() => {
         async function fetchSpotifyStatus() {
             setLoading(true);
-            const { data } = await axios
-                .get(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`)
-                .then(({ data }) => data);
-            console.log(data);
+            const { data } = await axios.get(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
+            const spotifyData = await data.data;
+            console.log(spotifyData);
             setLoading(false);
-            setSpotifyStatus(data);
+            setSpotifyStatus(spotifyData);
         }
         fetchSpotifyStatus();
     }, []);
@@ -57,8 +61,11 @@ const NowPlaying: React.FC = () => {
                     {loading ? (
                         <FaSpinner className={styles.spinner} fontSize={48} />
                     ) : spotifyStatus?.listening_to_spotify ? (
-                        // nothing, because im always offline on discord :p
-                        <></>
+                        <div className={styles.playing}>
+                            <img src={spotifyStatus.spotify.album_art_url} width={200} height={200} alt="" />
+                            <h3 className={styles['playing--artist']}>{spotifyStatus.spotify.artist}</h3>
+                            <h2 className={styles['playing--text']}>{spotifyStatus.spotify.song}</h2>
+                        </div>
                     ) : (
                         <div className={styles.not__playing}>
                             <img src={Spotify} width={100} height={100} alt="" />
