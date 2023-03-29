@@ -33,7 +33,6 @@ const NowPlaying: React.FC = () => {
             setLoading(true);
             const { data } = await axios.get(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
             const spotifyData = await data.data;
-            console.log(spotifyData);
             setLoading(false);
             setSpotifyStatus(spotifyData);
         }
