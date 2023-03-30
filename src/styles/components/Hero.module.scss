@@ -5,7 +5,12 @@
         flex-direction: column;
         align-items: center;
         .logo {
+            cursor: pointer;
             border-radius: 50%;
+            transition: rotate 2500ms ease;
+        }
+        .logo--spin {
+            rotate: 360deg;
         }
         .title {
             padding-top: 8px;

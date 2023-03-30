@@ -5,12 +5,20 @@ import styles from '/src/styles/components/Hero.module.scss';
 import Nav from './Nav';
 
 const Hero: React.FC = () => {
+    const [spin, setSpin] = React.useState<boolean>(false);
     return (
         <main>
             <section id={styles.hero}>
                 <Nav />
                 <header className={styles.header}>
-                    <img className={styles.logo} src={Picture} width="165" height="165" alt="" />
+                    <img
+                        onClick={() => setSpin((state) => !state)}
+                        className={`${styles.logo} ${spin ? styles['logo--spin'] : ''} click`}
+                        src={Picture}
+                        width="165"
+                        height="165"
+                        alt=""
+                    />
                     <h1 className={styles.title}>qieqss</h1>
                     <p className={styles.description}>
                         Hi, I&apos;m Alexey. I&apos;m a 16 y/o software engineer and I like to build cool stuff{' '}
