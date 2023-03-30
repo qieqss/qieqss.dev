@@ -5,13 +5,13 @@
     &:hover {
         cursor: pointer;
         &:not(.link--active) {
+            text-shadow: 0 0 3px lighten(#265c73, 5%);
             color: lighten(#265c73, 5%);
         }
     }
 }
 
 .link--active {
-    font-weight: 600;
     text-shadow: 0 0 3px #663399;
     color: #663399;
 }
