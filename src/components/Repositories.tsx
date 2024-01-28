@@ -11,7 +11,7 @@ const Repositories: React.FC = () => {
         repo: string;
         description: string;
         demo: string;
-        language: { name: string, color: string };
+        language: { name: string; color: string };
         stars: number;
         forks: number;
     }
@@ -51,10 +51,9 @@ const Repositories: React.FC = () => {
         async function fetchPinnedRepos() {
             const pinnedRepositories: AxiosResponse<PinnedRepository[]> = await axios.get(
                 'https://gh-pinned-repos-api.ysnirix.xyz/api/get/?username=qieqss',
-            );
-            console.log(pinnedRepositories.data.response)
-            const pinnedRepositoriesData = pinnedRepositories.data.response as PinnedRepository[];
-            setPinnedRepos(pinnedRepositoriesData);
+            ).then((res) => res.data.response);
+            const pinnedRepositoriesData = pinnedRepositories as unknown;
+            setPinnedRepos(pinnedRepositoriesData as PinnedRepository[]);
         }
 
         fetchGithubStats();
