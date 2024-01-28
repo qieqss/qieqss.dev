@@ -57,7 +57,7 @@ const About: React.FC = () => {
                     <a className={styles.anchor} href="https://www.rust-lang.org/" target="_blank" rel="noreferrer">
                         Rust
                     </a>{' '}
-                    as well because I think that&apos;s the future. I haven&apos;t gotten into it a lot because frankly
+                    as well because I think that&apos;s the future. I haven&apos;t gotten into it a lot, because, frankly,
                     I have no time.
                 </p>
             </div>
