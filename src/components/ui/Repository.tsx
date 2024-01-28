@@ -9,12 +9,12 @@ interface Props {
     title: string;
     description: string;
     languageColor: string;
-    language: string;
+    languageName: string;
     stars: number;
     forks: number;
 }
 
-const Repository: React.FC<Props> = ({ link, title, description, languageColor, language, stars, forks }: Props) => {
+const Repository: React.FC<Props> = ({ link, title, description, languageColor, languageName, stars, forks }: Props) => {
     return (
         <motion.a
             whileHover={{ scale: 1.05 }}
@@ -28,7 +28,7 @@ const Repository: React.FC<Props> = ({ link, title, description, languageColor, 
             <p className={styles.description}>{description}</p>
             <div className={styles.bottom}>
                 <div className={styles.language}>
-                    <span style={{ color: languageColor }}>⬤</span> {language}
+                    <span style={{ color: languageColor }}>⬤</span> {languageName}
                 </div>
                 <div className={styles.statistics}>
                     <div className={styles.stars}>

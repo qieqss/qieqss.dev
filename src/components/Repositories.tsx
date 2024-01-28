@@ -7,13 +7,11 @@ import Footer from './Footer';
 
 const Repositories: React.FC = () => {
     interface PinnedRepository {
-        owner: string;
+        name: string;
         repo: string;
-        link: string;
         description: string;
-        image: string;
-        language: string;
-        languageColor: string;
+        demo: string;
+        language: { name: string, color: string };
         stars: number;
         forks: number;
     }
@@ -52,9 +50,10 @@ const Repositories: React.FC = () => {
         }
         async function fetchPinnedRepos() {
             const pinnedRepositories: AxiosResponse<PinnedRepository[]> = await axios.get(
-                'https://gh-pinned-repos.egoist.dev/?username=qieqss',
+                'https://gh-pinned-repos-api.ysnirix.xyz/api/get/?username=qieqss',
             );
-            const pinnedRepositoriesData = pinnedRepositories.data as PinnedRepository[];
+            console.log(pinnedRepositories.data.response)
+            const pinnedRepositoriesData = pinnedRepositories.data.response as PinnedRepository[];
             setPinnedRepos(pinnedRepositoriesData);
         }
 
@@ -79,11 +78,11 @@ const Repositories: React.FC = () => {
                             key={project.repo}
                         >
                             <Repository
-                                link={project.link}
-                                title={project.repo}
+                                link={project.repo}
+                                title={project.name}
                                 description={project.description}
-                                languageColor={project.languageColor}
-                                language={project.language}
+                                languageColor={project.language.color}
+                                languageName={project.language.name}
                                 stars={project.stars}
                                 forks={project.forks}
                             />
