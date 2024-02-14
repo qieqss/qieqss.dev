@@ -2,7 +2,7 @@
     background-color: #1c1c1c;
     border: 2px solid #265c73;
     border-radius: 8px;
-    padding: 16px;  
+    padding: 16px;
     width: 100%;
     max-width: 500px;
     height: 100%;
@@ -26,10 +26,21 @@
         display: flex;
         gap: 12px;
         margin-top: 4px;
-        .stars, .forks {
+        .stars,
+        .forks {
             display: flex;
             align-items: center;
             gap: 4px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .repository {
+        max-height: 125px;
+        .bottom {
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 }
