@@ -21,16 +21,20 @@
         flex-direction: column;
         justify-content: flex-end;
         height: 100%;
-    }
-    .statistics {
-        display: flex;
-        gap: 12px;
-        margin-top: 4px;
-        .stars,
-        .forks {
+        .language {
             display: flex;
             align-items: center;
-            gap: 4px;
+        }
+        .statistics {
+            display: flex;
+            gap: 12px;
+            margin-top: 4px;
+            .stars,
+            .forks {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
         }
     }
 }
@@ -38,9 +42,14 @@
 @media (max-width: 800px) {
     .repository {
         max-height: 125px;
+        .title {
+            font-size: 20px;
+        }
+        .description {
+            font-size: 14px;
+        }
         .bottom {
-            flex-direction: row;
-            justify-content: space-between;
+            display: none;
         }
     }
 }
