@@ -24,8 +24,8 @@ body {
     background-color: #171717;
 }
 
-section {
-    height: 100vh;
+section, main {
+    min-height: 100vh;
     scroll-snap-align: center;
 }
 
