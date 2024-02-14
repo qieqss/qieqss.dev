@@ -6,6 +6,7 @@
         flex-direction: column;
         align-items: center;
         .logo {
+            user-select: none;
             cursor: pointer;
             border-radius: 50%;
             transition: rotate 2500ms ease;
@@ -25,7 +26,7 @@
         .description {
             font-size: 22px;
             text-align: center;
-            padding-top: 4px;
+            padding-top: 8px;
         }
 
         .links {
